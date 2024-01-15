@@ -1,6 +1,6 @@
 # Python Exercism Solutions
 
-Welcome to my repository featuring Python solutions for exercises from [Exercism](https://exercism.io)'s Python track!
+Welcome to my repository featuring Python solutions for exercises from [Exercism] (https://exercism.io) 's Python track!
 
 ## Overview
 
