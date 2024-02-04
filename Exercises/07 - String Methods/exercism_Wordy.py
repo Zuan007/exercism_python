@@ -2,26 +2,16 @@ def answer(question):
     operation = None
     number = None
 
+    question = question.removeprefix("What is").removesuffix("?").strip()
     for word in question:
         if word.isdigit():
             number = int(word)
-        elif word in ('plus','minus','multiplied','divided'):
+        elif word in ('plus','minus','multiplied by','divided by'):
             operation = word
-        elif word == 'is':
-            continue
         else:
             raise ValueError('syntax error')
         
-    if operation == 'plus':
-        answer += number
-    if operation == 'minus':
-        answer -= number
-    if operation == 'multiplied':
-        answer *= number
-    if operation == 'divided':
-        answer /= number
 
     return answer
 
-problem_2 = "What is 5 plus 13?"
-print(answer(problem_2))
+print(answer('What is 5 plus 13?'))
