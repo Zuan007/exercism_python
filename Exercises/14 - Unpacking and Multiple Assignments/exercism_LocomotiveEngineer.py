@@ -7,6 +7,7 @@ def get_list_of_wagons(*args):
     :param: arbitrary number of wagons.
     :return: list - list of wagons.
     """
+
     return list(args)
 
 
@@ -18,9 +19,8 @@ def fix_list_of_wagons(each_wagons_id, missing_wagons):
     :return: list - list of wagons.
     """
     
-    wagon_id = each_wagons_id[0, 1]
-    
-
+    wagon1, wagon2, locomotive, *rest = each_wagons_id
+    return [locomotive, *missing_wagons, *rest, wagon1, wagon2]
 
 
 def add_missing_stops():
@@ -40,7 +40,8 @@ def extend_route_information(route, more_route_information):
     :param more_route_information: dict -  extra route information.
     :return: dict - extended route information.
     """
-    pass
+    
+    return {**route, **more_route_information}
 
 
 def fix_wagon_depot(wagons_rows):
